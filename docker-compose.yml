@@ -1,0 +1,12 @@
+services:
+  squid:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # priveleged: true
+    tty: true
+    stdin_open: true
+    ports:
+      - 3128:3128
+    restart: always
+    container_name: squid3
